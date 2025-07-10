@@ -1,11 +1,26 @@
 import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
+import { getNeighbors } from './NeighborGenerator';
 
 /**
- * Stub for depth-first enumeration (placeholder).
+ * Generator function to perform depth-first enumeration on a Formalis set.
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function* depthFirstEnumeration<T>(_set: IFormalisSet<T>, _predicate?: Predicate<T>): Iterable<T> {
-  // Not implemented — to be replaced with a true strategy.
-  yield;
+export function* depthFirstEnumeration<T>(set: IFormalisSet<T>, seedValues: T[] = [], maxDepth = 10): Generator<T> {
+  const seen = new Set<string>();
+
+  function* dfs(value: T, depth: number): Generator<T> {
+    const key = JSON.stringify(value);
+    if (seen.has(key)) return;
+    seen.add(key);
+
+    if (set.has(value)) yield value;
+    if (depth >= maxDepth) return;
+
+    for (const neighbor of getNeighbors(value)) {
+      yield* dfs(neighbor, depth + 1);
+    }
+  }
+
+  for (const seed of seedValues) {
+    yield* dfs(seed, 0);
+  }
 }

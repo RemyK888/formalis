@@ -6,6 +6,15 @@
   "author": "RemyK",
   "description": "Logical and infinite sets in TypeScript, with type safety and strategy-based evaluation.",
   "type": "module",
+  "homepage": "https://github.com/RemyK888/formalis#readme",
+  "bugs": {
+    "url": "https://github.com/RemyK888/formalis/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RemyK888/formalis.git"
+  },
   "scripts": {
     "format:fix": "npx prettier --write \"src/**/*.ts\"",
     "format:check": "npx prettier --check \"src/**/*.ts\"",
