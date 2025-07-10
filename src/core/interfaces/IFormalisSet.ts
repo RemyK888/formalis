@@ -18,7 +18,7 @@ export interface IFormalisSet<T = unknown> {
   /** Evaluation strategy configuration */
   readonly strategyOptions?: StrategyOptions;
 
-  getElements?(): T[];
+  getElements?(): readonly T[];
 
   /** Returns a predicate representation of the set */
   toPredicate(): Predicate<T>;
