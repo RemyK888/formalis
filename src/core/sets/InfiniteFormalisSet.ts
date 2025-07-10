@@ -1,5 +1,5 @@
 import { PredicateSet } from './PredicateSet';
-import { DescribedPredicate } from '../../types';
+import { DescribedPredicate } from '@/types';
 import { FormalisSetConstructorArgs } from './_internals';
 
 /**

@@ -24,6 +24,18 @@
 npm install formalism
 ```
 
+```bash
+yarn add formalism
+```
+
+```bash
+pnpm add formalism
+```
+
+```bash
+bun add formalism
+```
+
 ---
 
 ## 🧠 Core Concepts

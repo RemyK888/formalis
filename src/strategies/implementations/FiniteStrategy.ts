@@ -1,8 +1,6 @@
-import { BaseStrategy } from '../base/BaseStrategy';
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
-import { isFiniteFormalisSet } from '../../core/utils/TypeGuards';
+import { IFormalisSet, isFiniteFormalisSet } from '@/core';
+import { StrategyType, StrategyOptions, Predicate } from '@/types';
+import { BaseStrategy } from '../base';
 
 /**
  * Strategy for evaluating finite sets.

@@ -1,7 +1,16 @@
+import { LiteralEnum } from './literal-enum';
+
 /**
  * Identifiers for the available evaluation strategies.
  */
-export type StrategyType = 'finite' | 'lazy' | 'memoized' | 'parallel';
+export const StrategyType = {
+  Finite: 'finite',
+  Lazy: 'lazy',
+  Memoized: 'memoized',
+  Parallel: 'parallel',
+};
+
+export type StrategyType = LiteralEnum<typeof StrategyType>;
 
 /**
  * Common options for evaluation strategies.

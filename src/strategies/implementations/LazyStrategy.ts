@@ -1,7 +1,6 @@
-import { BaseStrategy } from '../base/BaseStrategy';
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
+import { IFormalisSet } from '@/core';
+import { StrategyType, StrategyOptions, Predicate } from '@/types';
+import { BaseStrategy } from '../base';
 
 /**
  * Lazily evaluates the predicate without constraint on enumeration.
@@ -13,7 +12,8 @@ export class LazyStrategy<T = unknown> extends BaseStrategy<T> {
     super(options);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   *evaluate(_set: IFormalisSet<T>, _condition: Predicate<T>): Iterable<T> {
-    return;
+    yield;
   }
 }

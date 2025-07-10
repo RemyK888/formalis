@@ -1,6 +1,4 @@
-import { Predicate, Metadata, Constraint } from '../../types';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
-
+import type { Predicate, Metadata, Constraint, StrategyType, StrategyOptions } from '@/types';
 /**
  * Base interface for all Formalis sets.
  */
@@ -19,6 +17,8 @@ export interface IFormalisSet<T = unknown> {
 
   /** Evaluation strategy configuration */
   readonly strategyOptions?: StrategyOptions;
+
+  getElements?(): T[];
 
   /** Returns a predicate representation of the set */
   toPredicate(): Predicate<T>;

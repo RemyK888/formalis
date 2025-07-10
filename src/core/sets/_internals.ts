@@ -1,5 +1,4 @@
-import { Constraint, Metadata } from '../../types';
-import { StrategyOptions, StrategyType } from '../../types/strategies';
+import type { Constraint, Metadata, StrategyOptions, StrategyType } from '@/types';
 
 export type FormalisSetConstructorArgs<T> = [
   strategy: StrategyType,

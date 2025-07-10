@@ -1,7 +1,5 @@
-import { IFormalisSet } from '../interfaces/IFormalisSet';
-import { PredicateSet } from '../sets/PredicateSet';
-import { FiniteFormalisSet } from '../sets/FiniteFormalisSet';
-import { InfiniteFormalisSet } from '../sets/InfiniteFormalisSet';
+import { IFormalisSet } from '../interfaces';
+import { PredicateSet, FiniteFormalisSet, InfiniteFormalisSet } from '../sets';
 
 /**
  * Checks if a set is a PredicateSet.

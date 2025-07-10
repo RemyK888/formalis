@@ -1,7 +1,6 @@
-import { BaseStrategy } from '../base/BaseStrategy';
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
+import { IFormalisSet } from '@/core';
+import { StrategyType, StrategyOptions, Predicate } from '@/types';
+import { BaseStrategy } from '../base';
 
 /**
  * Strategy that caches evaluation results.

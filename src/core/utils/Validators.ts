@@ -1,4 +1,4 @@
-import { Constraint, Predicate } from '../../types';
+import type { Constraint, Predicate } from '@/types';
 
 /**
  * Validates whether a value satisfies all given constraints.

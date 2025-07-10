@@ -1,5 +1,5 @@
-import { IEvaluationStrategy } from '../../core/interfaces/IEvaluationStrategy';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
+import { IEvaluationStrategy } from '@/core';
+import { StrategyType, StrategyOptions } from '@/types';
 import { FiniteStrategy, LazyStrategy, MemoizedStrategy, ParallelStrategy } from '../implementations';
 
 /**
@@ -10,12 +10,12 @@ export class StrategyManager {
     switch (type) {
       case 'finite':
         return new FiniteStrategy<T>(options);
-      case 'lazy':
-        return new LazyStrategy<T>(options);
       case 'memoized':
         return new MemoizedStrategy<T>(options);
       case 'parallel':
         return new ParallelStrategy<T>(options);
+      default:
+        return new LazyStrategy<T>(options);
     }
   }
 }

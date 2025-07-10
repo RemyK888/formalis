@@ -1,5 +1,5 @@
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
+import { IFormalisSet } from '@/core';
+import { Predicate } from '@/types';
 
 /**
  * Applies a transformation function to a set, producing a new derived set.

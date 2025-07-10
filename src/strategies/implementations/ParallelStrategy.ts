@@ -1,7 +1,6 @@
-import { BaseStrategy } from '../base/BaseStrategy';
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
+import { IFormalisSet } from '@/core';
+import { StrategyType, StrategyOptions, Predicate } from '@/types';
+import { BaseStrategy } from '../base';
 
 /**
  * Strategy stub for parallel processing (non-threaded, placeholder).
@@ -14,7 +13,7 @@ export class ParallelStrategy<T = unknown> extends BaseStrategy<T> {
   }
 
   *evaluate(set: IFormalisSet<T>, condition: Predicate<T>): Iterable<T> {
-    for (const el of (set as any).getElements?.() || []) {
+    for (const el of set?.getElements?.() || []) {
       if (condition(el)) yield el;
     }
   }

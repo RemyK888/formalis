@@ -1,7 +1,5 @@
 import { IFormalisSet } from '../interfaces/IFormalisSet';
-import { Predicate, Constraint, Metadata } from '../../types';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
-
+import type { Predicate, Constraint, Metadata, StrategyType, StrategyOptions } from '@/types';
 /**
  * Abstract base class for all Formalis sets.
  */

@@ -1,10 +1,11 @@
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
+import { IFormalisSet } from '@/core/interfaces/IFormalisSet';
 
 /**
  * Returns the power set of a finite Formalis set.
  */
 export function powerSet<T>(set: IFormalisSet<T> & { getElements: () => readonly T[] }): IFormalisSet<readonly T[]> {
   const elements = set.getElements();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const subsets = 1 << elements.length;
 
   return {
