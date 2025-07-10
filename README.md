@@ -42,7 +42,7 @@ bun add formalism
 
 Formal sets in **Formalis** are not built by listing elements, but by defining **properties** (predicates):
 
-<img src="https://latex.codecogs.com/svg.image?A%20%3D%20%5C%7B%20x%20%5Cin%20%5Cmathbb%7BN%7D%20%7C%20x%20%5Ctext%7B is%20even%7D%20%5C%7D" alt="A = { x ∈ ℕ | x is even }" width="300" />
+<img src="https://latex.codecogs.com/svg.image?A%20%3D%20%5C%7B%20x%20%5Cin%20%5Cmathbb%7BN%7D%20%7C%20x%20%5Ctext%7B%20is%20even%7D%20%5C%7D" alt="A = { x ∈ ℕ | x is even }" width="300" />
 
 ```ts
 import { NumericSetFactory } from 'formalis';
@@ -180,20 +180,12 @@ for (const el of breadthFirstEnumeration(mySet)) {
 
 ---
 
-## 🧪 Testing
-
-```bash
-npm test
-```
-
----
-
 ## 🏁 Benchmarking
 
 A standalone benchmark script is available to evaluate the performance of Formalis operations. To run it:
 
 ```bash
-node scripts/benchmark.js
+node test/benchmark.js
 ```
 This will execute a series of timed operations and print durations in seconds, such as:
  - Predicate evaluation on large ranges
