@@ -1,5 +1,5 @@
-import { AbstractFormalisSet } from '../abstract/AbstractFormalisSet';
-import { DescribedPredicate } from '../../types';
+import { DescribedPredicate } from '@/types';
+import { AbstractFormalisSet } from '../abstract';
 import { FormalisSetConstructorArgs } from './_internals';
 
 /**
@@ -22,9 +22,9 @@ export class PredicateSet<T = unknown> extends AbstractFormalisSet<T> {
 
   sample(n: number, from = 0): T[] {
     const results: T[] = [];
-    let current = from;
+    let current: number = from;
     while (results.length < n) {
-      if (this.has(current as any)) results.push(current as any);
+      if (this.has(current as T)) results.push(current as T);
       current++;
       if (current > 1_000_000) break;
     }

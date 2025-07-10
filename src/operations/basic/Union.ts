@@ -1,4 +1,4 @@
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
+import { IFormalisSet } from '@/core/interfaces/IFormalisSet';
 
 /**
  * Returns the union of two sets.

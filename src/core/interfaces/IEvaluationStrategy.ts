@@ -1,5 +1,4 @@
-import { Predicate } from '../../types';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
+import type { StrategyType, StrategyOptions, Predicate } from '@/types';
 import { IFormalisSet } from './IFormalisSet';
 
 /**

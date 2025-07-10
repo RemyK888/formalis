@@ -1,7 +1,5 @@
-import { IEvaluationStrategy } from '../../core/interfaces/IEvaluationStrategy';
-import { StrategyType, StrategyOptions } from '../../types/strategies';
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
+import { IEvaluationStrategy, IFormalisSet } from '@/core';
+import { StrategyType, StrategyOptions, Predicate } from '@/types';
 
 /**
  * Abstract base class for evaluation strategies.

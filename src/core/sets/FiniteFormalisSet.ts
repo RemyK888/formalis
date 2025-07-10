@@ -1,4 +1,4 @@
-import { AbstractFormalisSet } from '../abstract/AbstractFormalisSet';
+import { AbstractFormalisSet } from '@/core/abstract';
 import { FormalisSetConstructorArgs } from './_internals';
 
 /**

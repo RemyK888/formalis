@@ -1,5 +1,5 @@
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
-import { Predicate } from '../../types';
+import { IFormalisSet } from '@/core';
+import { Predicate, StrategyType } from '@/types';
 
 /**
  * Combines multiple sets into a single predicate-based set.
@@ -13,7 +13,7 @@ export function combineSets<T>(
 
   return {
     has: predicate,
-    strategy: sets[0]?.strategy ?? 'lazy',
+    strategy: sets[0]?.strategy ?? StrategyType.Lazy,
     strategyOptions: sets[0]?.strategyOptions,
     metadata: { name },
     toPredicate: () => predicate,

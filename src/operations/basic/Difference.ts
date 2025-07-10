@@ -1,4 +1,4 @@
-import { IFormalisSet } from '../../core/interfaces/IFormalisSet';
+import { IFormalisSet } from '@/core/interfaces/IFormalisSet';
 
 /**
  * Returns the difference A \ B.

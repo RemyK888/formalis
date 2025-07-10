@@ -12,17 +12,14 @@
     "outDir": "./dist",
     "skipLibCheck": true,
     "noEmitOnError": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "noEmitHelpers": false,
     "importHelpers": false,
     "downlevelIteration": true,
     "stripInternal": true,
-    "noFallthroughCasesInSwitch": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "strictNullChecks": true,
     "allowJs": true,
 
     "paths": {

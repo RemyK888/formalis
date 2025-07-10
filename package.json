@@ -4,15 +4,19 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "RemyK",
+  "type": "module",
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint src --ext .ts",
-    "build": "rimraf dist && tsc && gen-esm-wrapper ./dist/src/index.js ./dist/src/index.mjs",
-    "fix": "eslint src --ext .ts --fix",
+    "format:fix": "npx prettier --write \"src/**/*.ts\"",
+    "format:check": "npx prettier --check \"src/**/*.ts\"",
+    "lint:check": "npx eslint src --ext .ts",
+    "lint:fix": "npx eslint src --ext .ts --fix",
+    "build": "npx tsc --build",
     "test": "ts-node ./test/index.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.12",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
     "check-dts": "^0.9.0",
     "eslint": "^9.30.1",
     "gen-esm-wrapper": "^1.1.3",
